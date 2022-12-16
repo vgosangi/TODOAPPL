@@ -27,7 +27,7 @@ const initializeDBAndServer = async () => {
 
 initializeDBAndServer();
 
-// API 1 second
+// API 1
 app.get("/todos/", async (request, response) => {
   const { status = "", priority = "", search_q = "" } = request.query;
   let getBooksQuery = "";
@@ -157,7 +157,7 @@ app.put("/todos/:todoId/", async (request, response) => {
   response.send(`${Updated} Updated`);
 });
 
-//API 5
+//API 5 jii
 app.delete("/todos/:todoId/", async (request, response) => {
   const { todoId } = request.params;
   const deleteTodoQuery = `
